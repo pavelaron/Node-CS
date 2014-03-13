@@ -6,6 +6,6 @@ Node-CS
 `$ node cs app.coffee`
 
 
-**Example for JavaScript file with .coffee or .js modules:S**
+**Example for JavaScript file with .coffee or .js modules:**
 
 `$ node cs app.js`
