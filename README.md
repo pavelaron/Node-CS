@@ -1,11 +1,11 @@
 Node-CS
 =======
 
-Example for CoffeeScript file with .coffee or .js modules:
+**Example for CoffeeScript file with .coffee or .js modules:**
 
-$ node cs app.coffee
+`$ node cs app.coffee`
 
 
-Example for JavaScript file with .coffee or .js modules:S
+**Example for JavaScript file with .coffee or .js modules:S**
 
-$ node cs app.js
+`$ node cs app.js`
