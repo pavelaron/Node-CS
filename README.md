@@ -1,4 +1,4 @@
-Node-CS
+Node_CS
 =======
 
 **Example for CoffeeScript file with .coffee or .js modules:**
