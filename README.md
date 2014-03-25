@@ -1,4 +1,6 @@
-Node_CS
+<img src="./coffee.png?raw=true" width="150px" alt="img text" />
+
+Node_CS 
 =======
 
 **Example for CoffeeScript file with .coffee or .js modules:**
