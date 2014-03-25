@@ -1,4 +1,4 @@
-<img src="./coffee.png?raw=true" width="150px" alt="img text" />
+<img src="./coffee.png?raw=true" width="150px" />
 
 Node_CS 
 =======
