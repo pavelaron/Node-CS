@@ -107,7 +107,7 @@ var CSON = {
 	},
 	
 	stringify: function(csonObj) {
-		return toCSON(JSON.stringify(csonObj, null, 4));
+		return this.toCSON(JSON.stringify(csonObj, null, 4));
 	}
 	
 };
