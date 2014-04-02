@@ -92,6 +92,26 @@ var removeComments = function(str) {
     );
 };
 
+var CSON = {
+	
+	parse: function(csonStr) {
+		return JSON.parse(CoffeeScript.compile(csonStr));
+	},
+	
+	toCSON: function(jsonStr) {
+	
+		var csonDat = 
+		jsonStr.replace(/(,|{|})(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/g, '');
+	
+		return '{' + csonDat.replace(/"(\w+)"\s*:/g, '$1:') + '}';
+	},
+	
+	stringify: function(csonObj) {
+		return toCSON(JSON.stringify(csonObj, null, 4));
+	}
+	
+};
+
 /**
  * CoffeeScript Compiler v1.3.3
  * http://coffeescript.org
