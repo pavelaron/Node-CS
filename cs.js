@@ -5,7 +5,7 @@ String.prototype.endsWith = function(suffix) {
     return this.match(suffix + '$') != undefined;
 };
 
-String.prototype.contains(str) {
+String.prototype.contains = function(str) {
 	return this.indexOf(str) != -1;
 };
 
