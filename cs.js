@@ -5,6 +5,10 @@ String.prototype.endsWith = function(suffix) {
     return this.match(suffix + '$') != undefined;
 };
 
+String.prototype.contains(str) {
+	return this.indexOf(str) != -1;
+};
+
 var compileCoffee = function(module, filename) {
 	var content = CoffeeScript.compile(fs.readFileSync(filename, 'utf8'));
 	module._compile(stripBOM(content), filename);
@@ -42,7 +46,7 @@ var runCoffee = function(file) {
 
 var isCoffeeScript = function(code, fileName) {
 	
-	var strippedCode = removeComments(code);
+	var strippedCode = removeComments(code, 0);
 	if (strippedCode.match(/var|;/g) != undefined || fileName.endsWith('.js')) {
 		return false;
 	}
@@ -50,11 +54,15 @@ var isCoffeeScript = function(code, fileName) {
 	return true;
 };
 
-var removeComments = function(str) {
+var removeComments = function(str, add) {
  
-    var uid = '_' + + new Date(),
+    var uid = '_' + + new Date() + add,
         primatives = [],
         primIndex = 0;
+ 
+	if (str.contains(uid)) {
+		return removeComments(str, ++add);
+	}
  
     return (
         str
