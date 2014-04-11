@@ -1,8 +1,8 @@
 var fs = require('fs');
 var mod = require('module');
 
-String.prototype.endsWith = function(suffix) {
-    return this.match(suffix + '$') != undefined;
+String.prototype.endsWith = function(str) {
+	return this.slice(-str.length) === str;
 };
 
 String.prototype.contains = function(str) {
